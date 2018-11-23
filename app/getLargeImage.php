@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class getLargeImageController extends Model
+class getLargeImage extends Model
 {
     public function postion(){
 
