@@ -20,3 +20,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('init', 'initController@index');
 Route::get('getLargeImage', 'getLargeImageController@getImg');
 Route::get('getSmallImage', 'getSmallImageController@getImg');
+Route::get('verify', 'verifyController@verify');
