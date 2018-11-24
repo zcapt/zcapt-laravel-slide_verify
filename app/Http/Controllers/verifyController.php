@@ -10,8 +10,8 @@ class verifyController extends Controller
     public function verify(request $request)
     {
 
-        $inputX = 0;
-        $inputY = 0;
+        $inputX = $request->input('x');
+        $inputY = $request->input('y');
 
         //get value of authID from init.php
         $response_authID = app('App\Http\Controllers\initController')->index($request);
