@@ -18,6 +18,7 @@ class CreateInitsTable extends Migration
             $table->string('authID');
             $table->string('x');
             $table->string('y');
+            $table->string('verified');
             $table->timestamps();
         });
     }
