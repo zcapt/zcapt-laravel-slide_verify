@@ -27,22 +27,19 @@ class getLargeImageController extends Controller
         $authID = $response->getOriginalContent()['authID'];
 
         // Calculate the diagonal coordinate for that square
-        $position_x_1 = DB::table('inits')
+        $position_x_1 = current(DB::table('inits')
             ->select('x')
             ->where('authID', '=', $authID)
             ->inRandomOrder()
-            ->first();
+            ->first());
 
-        $position_y_1 = DB::table('inits')
+        $position_y_1 = current(DB::table('inits')
             ->select('y')
             ->where('authID', '=', $authID)
             ->inRandomOrder()
-            ->first();
+            ->first());
 
-        $position_x_1 = current($position_x_1);
-        $position_y_1 = current($position_y_1);
         $position_x_2 = $position_x_1 + 50;
-
         $position_y_2 = $position_y_1 + 50;
 
         $i = 57;

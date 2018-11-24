@@ -23,17 +23,17 @@ class getSmallImageController extends Controller
         $authID = $response->getOriginalContent()['authID'];
 
         // Calculate the diagonal coordinate for that square
-        $position_x_1 = DB::table('inits')
+        $position_x_1 = current(DB::table('inits')
             ->select('x')
             ->where('authID', '=', $authID)
             ->inRandomOrder()
-            ->first();
+            ->first());
 
-        $position_y_1 = DB::table('inits')
+        $position_y_1 = current(DB::table('inits')
             ->select('y')
             ->where('authID', '=', $authID)
             ->inRandomOrder()
-            ->first();
+            ->first());
 
 
 // Create a small image with height 50 and width 50
@@ -41,7 +41,7 @@ class getSmallImageController extends Controller
         $img_small = imagecreatetruecolor(50, 50);
 // Copy one part of the large image (the image with size 300*200) to small part of image
 
-        imagecopy($img_small, $img, 0, 0, current($position_x_1), current($position_y_1), 50, 50);
+        imagecopy($img_small, $img, 0, 0, $position_x_1, $position_y_1, 50, 50);
 // Change brightness of the picture
         imagefilter($img_small, IMG_FILTER_BRIGHTNESS, 50);
         $position_1 = 0;
