@@ -165,6 +165,7 @@ return [
         /*
          * Package Service Providers...
          */
+        Brotzka\DotenvEditor\DotenvEditorServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -223,6 +224,9 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+
+        //package
+        'DotenvEditor' => Brotzka\DotenvEditor\DotenvEditorFacade::class,
 
     ],
 
