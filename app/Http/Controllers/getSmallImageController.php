@@ -11,7 +11,7 @@ class getSmallImageController extends Controller
     {
         // Get the image from local file. The image must be 300*200 size.
         //change $img to your own path
-        $img_path = '/home/jonnyy/PhpstormProjects/slide_verify/zcapt-laravel-slide_verify/app/Repository/Image/1.jpg';
+        $img_path = '../app/Repository/Image/1.jpg';
 
         $img = imagecreatefromjpeg($img_path);
         $img_size = getimagesize($img_path);
