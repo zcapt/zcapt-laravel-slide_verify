@@ -81,18 +81,26 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Zcpat
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="{{ url('/enveditor') }}">configure your environment</a>
+                    <a ></a>
                 </div>
             </div>
         </div>
+        <script>
+            let Base64 = require('js-base64').Base64;
+            let a = {
+                init: "http://localhost:8000/api/init",
+                large: "http://localhost:8000/api/getLargeImage",
+                small: "http://localhost:8000/api/getSmallImage",
+                veri: "http://localhost:8000/api/verify"
+            };
+            console.log(Base64.encode(JSON.stringify(a)));
+        </script>
     </body>
+
 </html>
+
