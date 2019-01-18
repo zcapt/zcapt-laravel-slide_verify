@@ -16,4 +16,7 @@ class initController extends Controller
         }
         return response()->json(['status:' => 0,'authID' => current($init)]);
     }
+    public function convertBase64(Request $request){
+        return base64_encode(Request::url());
+    }
 }

@@ -62,5 +62,8 @@ class getLargeImageController extends Controller
 
     }
 
+    public function convertBase64(Request $request){
+        return base64_encode(Request::url());
+    }
 
 }
