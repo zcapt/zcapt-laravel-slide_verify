@@ -54,7 +54,8 @@ class verifyController extends Controller
     }
 
     public function convertBase64(Request $request){
-        return base64_encode($request->url());
+        $veriBase64 = base64_encode($request->url());
+        return $veriBase64;
     }
 }
 

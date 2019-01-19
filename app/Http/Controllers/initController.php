@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\DB;
 
 class initController extends Controller
 {
+
     public function index(Request $request)
     {
 
@@ -19,6 +20,7 @@ class initController extends Controller
     }
 
     public function convertBase64(Request $request){
-        return base64_encode($request->url());
+        $initBase64 = base64_encode($request->url());
+        return $initBase64;
     }
 }
