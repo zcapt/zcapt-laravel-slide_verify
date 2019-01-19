@@ -52,8 +52,9 @@ class verifyController extends Controller
 
         }
     }
+
     public function convertBase64(Request $request){
-        return base64_encode(Request::url());
+        return base64_encode($request->url());
     }
 }
 
