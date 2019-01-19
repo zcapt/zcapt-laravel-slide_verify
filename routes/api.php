@@ -17,7 +17,14 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+//controller
 Route::get('init', 'initController@index');
 Route::get('getLargeImage', 'getLargeImageController@getImg');
 Route::get('getSmallImage', 'getSmallImageController@getImg');
 Route::get('verify', 'verifyController@verify');
+
+//Convert url to base64
+Route::get('init/base64', 'initController@convertBase64');
+Route::get('getLargeImage/base64', 'getLargeImageController@convertBase64');
+Route::get('getSmallImage/base64', 'getSmallImageController@convertBase64');
+Route::get('verify/base64', 'verifyController@convertBase64');
