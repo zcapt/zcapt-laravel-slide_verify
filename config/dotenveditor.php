@@ -39,5 +39,10 @@ return [
 
     // middleware and middlewaregroups. Add your own middleware if you want.
     'middleware'        => ['web'],
-    'middlewareGroups'  => []
+    'middlewareGroups'  => [],
+    //transfer url to base64
+    'base64' => ['initBase64' => env('initBase64',''),
+                 'smallBase64' => env('smallBase64',''),
+                 'largeBase64' => env('largeBase64',''),
+                 'veriBase64' => env('veriBase64',''),],
 ];
