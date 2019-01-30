@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\URL;
+
 
 
 class initController extends Controller
@@ -19,8 +21,20 @@ class initController extends Controller
         return response()->json(['status:' => 0,'authID' => current($init)]);
     }
 
-    public function convertBase64(Request $request){
-        $initBase64 = base64_encode($request->url());
-        return $initBase64;
+
+
+    public function connCheck(){
+
+        $DBName = DB::getDefaultConnection();
+        ;
+        /*try {
+          while ()
+        }A
+        catch (\Exception $e) {
+            return $e->getMessage();
+        }
+        */
+        return view('welcome')->with(['DBName' => $DBName]);
+
     }
 }

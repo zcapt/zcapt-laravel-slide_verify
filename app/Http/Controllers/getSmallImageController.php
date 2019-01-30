@@ -64,8 +64,5 @@ class getSmallImageController extends Controller
         imagedestroy($img);
         exit;
     }
-    public function convertBase64(Request $request){
-        $smallBase64 = base64_encode($request->url());
-        return $smallBase64;
-    }
+
 }
