@@ -5,7 +5,7 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Http\Request;
-use use Illuminate\Support\Facades\URL;
+use Illuminate\Support\Facades\URL;
 
 class urlToBase64 extends Command
 {
