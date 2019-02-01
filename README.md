@@ -48,7 +48,17 @@ $ php artisan migrate
 php artisan db:seed
 ```
 
+### Generate application key
 
+```
+$php artisan key:generate
+```
+
+### Convert url to base64
+
+```
+$php artisan base64:generate
+```
 
 ### Run the application
 ```
