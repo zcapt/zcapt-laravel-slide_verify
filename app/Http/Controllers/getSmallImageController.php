@@ -11,14 +11,14 @@ class getSmallImageController extends Controller
     {
         // Get the image from local file. The image must be 300*200 size.
         //change $img to your own path
-        $img_path = '../app/Repository/Image/1.jpg';
+        $img_path = $this->random_pic();
 
         $img = imagecreatefromjpeg($img_path);
-        $img_size = getimagesize($img_path);
+        /*$img_size = getimagesize($img_path);
         if ($img_size[0] != 300 || $img_size[1] != 200)
             die("image size must be 300*200");
-
-        //get value of authID from init.php
+        */
+        //get value of authID from getLargeImageController.php
         $response = app('App\Http\Controllers\initController')->index($request);
         $authID = $response->getOriginalContent()['authID'];
 
@@ -63,6 +63,12 @@ class getSmallImageController extends Controller
         imagedestroy($img_small);;
         imagedestroy($img);
         exit;
+    }
+
+    public function random_pic(){
+        $files = glob('../app/Repository/Image/*.*');
+        $random_pic = array_random($files);
+         return $random_pic;
     }
 
 }
