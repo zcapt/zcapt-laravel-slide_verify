@@ -9,6 +9,6 @@ class getSmallImage extends Model
     public function position()
     {
 
-        $this->belongsTo('App\init');
+        $this->belongsTo('App\getLargeImage');
     }
 }
