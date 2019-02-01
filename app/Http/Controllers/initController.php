@@ -22,19 +22,4 @@ class initController extends Controller
     }
 
 
-
-    public function connCheck(){
-
-        $DBName = DB::getDefaultConnection();
-        ;
-        /*try {
-          while ()
-        }A
-        catch (\Exception $e) {
-            return $e->getMessage();
-        }
-        */
-        return view('welcome')->with(['DBName' => $DBName]);
-
-    }
 }
