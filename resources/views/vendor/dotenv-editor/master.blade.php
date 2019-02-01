@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-    <title>Dotenv-Editor</title>
+    <title>Zcapt-Dotenv-Editor</title>
 
     <!-- Bootstrap -->
     <!-- Latest compiled and minified CSS -->
