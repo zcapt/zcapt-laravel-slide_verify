@@ -15,4 +15,5 @@ $factory->define(App\init::class, function (Faker $faker) {
         'y' => $y,
         'verified' => 0,
     ];
+
 });
