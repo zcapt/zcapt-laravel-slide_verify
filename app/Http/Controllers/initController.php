@@ -18,7 +18,6 @@ class initController extends Controller
         $initNew= factory(init::class, 1)->create();
         $init = array_pluck($initNew, 'authID');
 
-            //DB::table('inits')->select('authID')->inRandomOrder()->first();
         if($init == false){
             return response()->json(['status:' => 1 ,'authID' => current($init)]);
         }
