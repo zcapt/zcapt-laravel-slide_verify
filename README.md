@@ -65,9 +65,4 @@ $php artisan base64:generate
 $ php artisan serve
 ```
 
-## Built With
-* [Laravel](https://laravel.com) - The PHP framework for building the API endpoints needed for the application
 
-
-## Acknowledgments
-* [Laravel](https://laravel.com) - The excellent documentation explaining how to get started with Laravel and Laravel Passport made it easy to provide a step by step guide for beginners to follow the application
